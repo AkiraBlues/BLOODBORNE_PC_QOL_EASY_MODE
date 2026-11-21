@@ -105,10 +105,17 @@ HUNTER_AXE      无限耐久 取消秘法补正 追加到力量技巧补正上 +
 KIRKHAMMER      无限耐久 属性补正略加强 补正略加强 +10时 物攻190 秘法攻击110 力量补正100 技巧补正70 秘法补正70
 SAW_SPEAR       无限耐久 取消秘法补正 追加到力量技巧补正上 +10时 物攻175 力量补正85 技巧补正95 
 BLADE_OF_MERCY  无限耐久 基础攻击略加强 补正略加强 +10时 物攻140 秘法攻击105 技巧补正150 秘法补正90
-RIFLE_SPEAR     无限耐久 取消秘法补正 追加到血质补正上 +10时 物攻170 血质攻击170 力量补正95 技巧补正95 血质补正140
+RIFLE_SPEAR     无限耐久 取消秘法补正 追加到血质补正上 +10时 物攻170 血质攻击170 力量补正95 技巧补正95 血质补正100
 STAKE_DRIVER    无限耐久 取消秘法补正 追加到力量技巧补正上 +10时 物攻170 力量补正110 技巧补正100
 LUDWIG_HOLY_BLADE  无限耐久 增加秘法伤害 基础攻击略加强 补正略加强 +10时 物攻200 秘法攻击120 力量补正85 技巧补正85 秘法补正80
 TONITRUS        无限耐久 雷电攻击加强 补正加强 +10时 物攻160 雷电攻击160  力量补正100 技巧补正60 秘法补正100 SPEFFECTPARAM=>[ID 6032]充电后持续7秒=>120秒
+Reiterpallasch  无限耐久 取消秘法补正 补正加强 +10时 物攻170 血质攻击170 力量补正90 技巧补正100 血质补正110
+BEAST_CUTTER
+BOOM_HAMMER
+AMYGDALAN_ARM
+CHIKAGE
+
+
 
 BEAST CUTTER 这几个优先加强
 
@@ -130,7 +137,9 @@ GASCOIGNE套装    所有异常状态抗性提高到10倍
 BLACK_CHRUCH SET 所有异常状态抗性提高到10倍
 WHITE_CHRUCH SET 所有异常状态抗性提高到10倍
 GRAVEGUARD SET   所有异常状态抗性提高到10倍
-
+幻影王冠         所有异常状态抗性提高到10倍 增加全抗性
+KNIGHT SET       所有异常状态抗性提高到10倍
+CAINHURST SET    所有异常状态抗性提高到10倍
 
 
 
@@ -171,7 +180,11 @@ KIRKHAMMER     售价改到10 教会石锤
 STAKE_DRIVER   售价改到10 打桩机
 LUDWIG_HOLY_BLADE 售价改到10 双手圣剑
 TONITRUS       售价改到10
-
+Reiterpallasch 售价改到10 骑士枪剑
+BEAST_CUTTER   售价改到10 
+BOOM_HAMMER    售价改到10 爆炸锤
+AMYGDALAN_ARM  售价改到10
+CHIKAGE        售价改到10
 
 Crowfeather set 售价改到1000 包括BEAK_MASK
 探墓者套装      售价改到1000
