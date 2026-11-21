@@ -1,7 +1,7 @@
 道具类
 BLOOD_VEIL 携带数量 20=>50 transfusionHpRate 恢复量 -40=>-50 即恢复50%的HP
 QUICKSILVER_BULLETS 携带数量 20=>80 sellValue 30=>20
-BLOOD_BULLETS 血子弹 携带数量 5=>20
+BLOOD_BULLETS 血子弹 携带数量 5=>20 SPEFFECTPARAM=>[ID 2012] 消耗30%HP 改为消耗100点HP 补充血子弹数量5=>10
 ANTIDOTE 携带数量10=>99
 SEDATIVE 携带数量10=>99
 怪兽药丸 携带数量10=>99
@@ -43,7 +43,6 @@ SPEFFECTPARAM=>[ID 40]NO RESONANCE
 最后测出来是Floor Material twenty three Poison Swamp _ Effect body 这个
 =>[ID 4800]禁忌森林通往IOSEFKA诊所的地下毒沼泽 持续时间0.06=>0.25 即每秒触发4次毒素累积效果
 =>[ID 4801]禁忌森林通往IOSEFKA诊所的地下毒沼泽 中毒后持续时间 40=>10
-=>[ID 2012]Temporary Bullet Recovery 血子弹 消耗30%HP 改为消耗100点HP 补充血子弹数量5=>10 最大携带数量同步修改 支持补充2次
 
 
 
@@ -106,16 +105,15 @@ LV1~LV9 原基础上加7 即修改后LV1会等于原版LV2的攻击力
 LV10 ATK 156=>160 无限耐久 DURABILITY的2个值都改为0就是无耐久
 属性补正略加强
 SAW_CLEAVER     无限耐久
-HUNTER_AXE      无限耐久
+HUNTER_AXE      无限耐久 取消秘法补正 追加到力量技巧补正上 +10时 物攻196 力量补正105 技巧补正75
 KIRKHAMMER      无限耐久 属性补正略加强 补正略加强 +10时 物攻190 秘法攻击110 力量补正100 技巧补正70 秘法补正70
 SAW_SPEAR       无限耐久
 BLADE_OF_MERCY  无限耐久 基础攻击略加强 补正略加强 +10时 物攻140 秘法攻击105 技巧补正150 秘法补正90
 RIFLE_SPEAR     无限耐久 取消秘法补正 追加到血质补正上 +10时 物攻170 血质攻击170 力量补正95 技巧补正95 血质补正140
 STAKE_DRIVER    无限耐久 取消秘法补正 追加到力量技巧补正上 +10时 物攻170 力量补正120 技巧补正105
 LUDWIG_HOLY_BLADE  无限耐久 增加秘法伤害 基础攻击略加强 补正略加强 +10时 物攻200 秘法攻击120 力量补正85 技巧补正85 秘法补正80
-
-
-TONITRUS        SPEFFECTPARAM=>[ID 6032]充电后持续7秒=>120秒
+TONITRUS        无限耐久 雷电攻击加强 补正加强 +10时 物攻160 雷电攻击160  力量补正100 技巧补正60 秘法补正100
+SPEFFECTPARAM=>[ID 6032]充电后持续7秒=>120秒
 
 
 STAKE_DRIVER    BEAST CUTTER 这几个优先加强
@@ -126,16 +124,18 @@ KOS寄生虫也要加强 毕竟是最终BOSS的武器 不加强说不过去的
 
 
 防具强化   注意resistTherianthrope实际上是兽性槽的容量 数值越大可以积累的兽性就越多 兽性的挡位是硬编码的 因此超出300以上的兽性没有意义
-也因此兽性槽可以不需要修改 或者简单改为2倍
+也因此兽性槽不需要修改 或者根据物品描述适量微调
 
 猎人套装         所有异常状态抗性提高到10倍
 TOP HAT          所有异常状态抗性提高到10倍 头部兽性槽降低
 雅南猎人套装     所有异常状态抗性提高到10倍
 CROWFEATHER套装  所有异常状态抗性提高到10倍 头部兽性槽降低
 灰狼套装         所有异常状态抗性提高到10倍 头部抗性增加 整体增加火抗性
-探墓者套装       所有异常状态抗性提高到10倍
-GASCOIGNE套装    所有异常状态抗性提高到10倍
+探墓者套装       所有异常状态抗性提高到10倍 头部兽性槽降低
+GASCOIGNE套装    所有异常状态抗性提高到10倍 
 BLACK_CHRUCH SET 所有异常状态抗性提高到10倍
+WHITE_CHRUCH SET 所有异常状态抗性提高到10倍
+
 
 
 
@@ -176,7 +176,7 @@ BLADE_OF_MERCY 售价改到10
 KIRKHAMMER     售价改到10 教会石锤 
 STAKE_DRIVER   售价改到10 打桩机
 LUDWIG_HOLY_BLADE 售价改到10 双手圣剑
-
+TONITRUS       售价改到10
 
 
 Crowfeather set 售价改到1000 包括BEAK_MASK
