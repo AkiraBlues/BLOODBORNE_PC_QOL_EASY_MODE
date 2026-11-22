@@ -95,8 +95,8 @@ EquipMtrlSetParam 任何材料的需要数量 都是1=>2=>3 原始是1=>5=>8 最
 物理武器 如果需要增加秘法伤害 除了修改秘法基础伤害 秘法补正外 还需要修改 isAttributeWep=0 参考慈悲之刃 这个值改为1就可以附魔但是默认只有物理伤害 改为0就有秘法伤害但是无法附魔
 
 
-BARE FIST
-ATK 25=>40 修正曲线恢复到0
+BARE FIST ATK 25=>40 修正曲线恢复到0
+GRATIA_FIST 无限耐久 基础攻击加强 削韧加强 补正加强 +10时 物攻150 削韧80 力量补正120
 
 
 THREADED_CANE   无限耐久 取消秘法补正 追加到力量技巧补正上 +10时 物攻175 力量补正60 技巧补正125
@@ -110,7 +110,7 @@ STAKE_DRIVER    无限耐久 取消秘法补正 追加到力量技巧补正上 +
 LUDWIG_HOLY_BLADE  无限耐久 增加秘法伤害 基础攻击略加强 补正略加强 +10时 物攻200 秘法攻击120 力量补正85 技巧补正85 秘法补正80
 TONITRUS        无限耐久 雷电攻击加强 补正加强 +10时 物攻160 雷电攻击160  力量补正100 技巧补正60 秘法补正100 SPEFFECTPARAM=>[ID 6032]充电后持续7秒=>120秒
 Reiterpallasch  无限耐久 取消秘法补正 补正加强 +10时 物攻170 血质攻击170 力量补正90 技巧补正100 血质补正110
-BEAST_CUTTER
+BEAST_CUTTER    需要加强削韧
 BOOM_HAMMER
 AMYGDALAN_ARM
 CHIKAGE
@@ -185,6 +185,7 @@ BEAST_CUTTER   售价改到10
 BOOM_HAMMER    售价改到10 爆炸锤
 AMYGDALAN_ARM  售价改到10
 CHIKAGE        售价改到10
+GRATIA_FIST    售价改到10
 
 Crowfeather set 售价改到1000 包括BEAK_MASK
 探墓者套装      售价改到1000
