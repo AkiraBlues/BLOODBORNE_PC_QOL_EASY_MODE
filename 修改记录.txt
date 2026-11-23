@@ -1,3 +1,8 @@
+A007200是普通翻滚动画 可以增加无敌时间 拉长第一行的蓝条往右即可 但是游戏中的闪避动作太多了 TAE里面有太多闪避动作 找不到哪个是对应的
+突然有一个思路 因为动作结束后会暂停动作输入 以使得硬直动画可以播放完成 此时能否缩短这个动作输入耗时以使得玩家提前可以移动或者开启下一个动作？
+可以是可以 但是会有动作不自然的问题
+
+
 道具类
 BLOOD_VEIL 携带数量 20=>50 transfusionHpRate 恢复量 -40=>-50 即恢复50%的HP
 QUICKSILVER_BULLETS 携带数量 20=>80 sellValue 30=>20
@@ -5,8 +10,8 @@ BLOOD_BULLETS 血子弹 携带数量 5=>20 SPEFFECTPARAM=>[ID 2012] 消耗30%HP 
 ANTIDOTE 携带数量10=>99
 SEDATIVE 携带数量10=>99
 怪兽药丸 携带数量10=>99
-FIRE_PAPER 携带数量10=>50
-BOLT_PAPER 携带数量10=>50
+FIRE_PAPER 携带数量10=>50 SPEFFECTPARAM=>[ID 2200]火纸 EFFECTENDURANCE 60=>600 
+BOLT_PAPER 携带数量10=>50 SPEFFECTPARAM=>[ID 2220]雷纸 EFFECTENDURANCE 60=>600
 BONE_MARROW_ASH 携带数量10=>50
 PEBBLE     携带数量20=>99
 MADMAN_KNOWLEDGE   灵视+1=>+2
@@ -30,10 +35,13 @@ calccorrectgraph=>
 
 
 
-SPEFFECTPARAM=>[ID 40]NO RESONANCE
+SPEFFECTPARAM=>[ID 40]NO RESONANCE 常驻状态修改
 =>ABSORPTION栏目 1.0=>0.4 即减伤60% MAGIC/FIRE/THUNDER减伤改到0.3 即减伤70%
-=>staminaRecoveryChangeSpeed 0=>30 耐力恢复速度增加30% consumeStaminaRate 1=>0.5 耐力消耗降低50%
+=>staminaRecoveryChangeSpeed 0=>30 耐力恢复速度增加30% consumeStaminaRate 1=>0.5 攻击动作耐力消耗降低50%
 =>fallDamageRate 1=>0.25 掉落伤害减少75%
+=>[210]奔跑体力消耗 EFFECTENDURANCE 0.1=>0.5 MOTIONINTERVAL 0.1=>0.5 奔跑时原本每秒消耗10点体力 改为每秒消耗2点体力
+=>[ID 394]不锁定时躲避的体力消耗降低 10=>5
+=>[ID 395]锁定时躲避的体力消耗降低 10=>5
 =>[ID 5230~5236]changeHpRate 70=>10 狂乱伤害从70%HP扣减降低到10%
 =>[ID 5280~5285]effectEndurance 统一改为6秒 即受到狂乱攻击后狂乱槽降低统一持续6秒
 =>[ID 2130]粪球会导致玩家毒抗下降 粪球持续时间600=>30
@@ -43,6 +51,8 @@ SPEFFECTPARAM=>[ID 40]NO RESONANCE
 最后测出来是Floor Material twenty three Poison Swamp _ Effect body 这个
 =>[ID 4800]禁忌森林通往IOSEFKA诊所的地下毒沼泽 持续时间0.06=>0.25 即每秒触发4次毒素累积效果
 =>[ID 4801]禁忌森林通往IOSEFKA诊所的地下毒沼泽 中毒后持续时间 40=>10
+=>[ID 102000~102002]EYE符文的探索度增加 统一改到3 即提高300%
+=>[ID 180060]MILK_WEED符文探索度增加 0.1=>1
 
 
 
@@ -95,10 +105,8 @@ EquipMtrlSetParam 任何材料的需要数量 都是1=>2=>3 原始是1=>5=>8 最
 物理武器 如果需要增加秘法伤害 除了修改秘法基础伤害 秘法补正外 还需要修改 isAttributeWep=0 参考慈悲之刃 这个值改为1就可以附魔但是默认只有物理伤害 改为0就有秘法伤害但是无法附魔
 
 
-BARE FIST ATK 25=>40 修正曲线恢复到0
+BARE FIST 物攻35 力量补正200 技巧补正200 补正曲线恢复正常 削韧15
 GRATIA_FIST 无限耐久 基础攻击加强 削韧加强 补正加强 +10时 物攻150 削韧80 力量补正120
-
-
 THREADED_CANE   无限耐久 取消秘法补正 追加到力量技巧补正上 +10时 物攻175 力量补正60 技巧补正125
 SAW_CLEAVER     无限耐久 取消秘法补正 追加到力量技巧补正上 +10时 物攻180 力量补正80 技巧补正75
 HUNTER_AXE      无限耐久 取消秘法补正 追加到力量技巧补正上 +10时 物攻196 力量补正95 技巧补正65
@@ -108,13 +116,17 @@ BLADE_OF_MERCY  无限耐久 基础攻击略加强 补正略加强 +10时 物攻
 RIFLE_SPEAR     无限耐久 取消秘法补正 追加到血质补正上 +10时 物攻170 血质攻击170 力量补正95 技巧补正95 血质补正100
 STAKE_DRIVER    无限耐久 取消秘法补正 追加到力量技巧补正上 +10时 物攻170 力量补正110 技巧补正100
 LUDWIG_HOLY_BLADE  无限耐久 增加秘法伤害 基础攻击略加强 补正略加强 +10时 物攻200 秘法攻击120 力量补正85 技巧补正85 秘法补正80
+HOLY_MOONLIGHT_SWORD 
 TONITRUS        无限耐久 雷电攻击加强 补正加强 +10时 物攻160 雷电攻击160  力量补正100 技巧补正60 秘法补正100 SPEFFECTPARAM=>[ID 6032]充电后持续7秒=>120秒
 Reiterpallasch  无限耐久 取消秘法补正 补正加强 +10时 物攻170 血质攻击170 力量补正90 技巧补正100 血质补正110
-BEAST_CUTTER    需要加强削韧
-BOOM_HAMMER
-AMYGDALAN_ARM
+BEAST_CUTTER    无限耐久 +10时 物攻184=>195 削韧25=>60 力量补正105 技巧补正55 秘法补正150 方便转属性武器
+BEASTHUNTER_SAIF  无限耐久 秘法补正加强 +10时 物攻180 削韧15=>25  力量补正55 技巧补正95 秘法补正145
+BOOM_HAMMER     无限耐久 +10时 物攻180 火焰攻击170 削韧20=>45 力量补正100 技巧补正60 秘法补正75
+AMYGDALAN_ARM 
 CHIKAGE
-
+旋转锯
+月光大剑
+野兽爪
 
 
 BEAST CUTTER 这几个优先加强
@@ -140,6 +152,9 @@ GRAVEGUARD SET   所有异常状态抗性提高到10倍
 幻影王冠         所有异常状态抗性提高到10倍 增加全抗性
 KNIGHT SET       所有异常状态抗性提高到10倍
 CAINHURST SET    所有异常状态抗性提高到10倍
+
+CONSTABLE SET    所有异常状态抗性提高到10倍
+BUTCHER SET      所有异常状态抗性提高到10倍
 
 
 
@@ -178,14 +193,17 @@ RIFLE_SPEAR    售价改到10
 BLADE_OF_MERCY 售价改到10
 KIRKHAMMER     售价改到10 教会石锤 
 STAKE_DRIVER   售价改到10 打桩机
-LUDWIG_HOLY_BLADE 售价改到10 双手圣剑
-TONITRUS       售价改到10
+LUDWIG_HOLY_BLADE 售价改到10 双手大剑
+HOLY_MOONLIGHT_SWORD 售价改到10 月光圣剑
+TONITRUS       售价改到10 电锥
 Reiterpallasch 售价改到10 骑士枪剑
 BEAST_CUTTER   售价改到10 
 BOOM_HAMMER    售价改到10 爆炸锤
 AMYGDALAN_ARM  售价改到10
 CHIKAGE        售价改到10
 GRATIA_FIST    售价改到10
+BEASTHUNTER_SAIF 售价改到10 
+
 
 Crowfeather set 售价改到1000 包括BEAK_MASK
 探墓者套装      售价改到1000
