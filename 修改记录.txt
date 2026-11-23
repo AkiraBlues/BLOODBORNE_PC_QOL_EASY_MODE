@@ -9,7 +9,7 @@ QUICKSILVER_BULLETS 携带数量 20=>80 sellValue 30=>20
 BLOOD_BULLETS 血子弹 携带数量 5=>20 SPEFFECTPARAM=>[ID 2012] 消耗30%HP 改为消耗100点HP 补充血子弹数量5=>10
 ANTIDOTE 携带数量10=>99
 SEDATIVE 携带数量10=>99
-怪兽药丸 携带数量10=>99
+BEAST_BLOOD_PELLET 携带数量10=>50 SPEFFECTPARAM=>[ID 3240]持续时间调整到600秒 
 FIRE_PAPER 携带数量10=>50 SPEFFECTPARAM=>[ID 2200]火纸 EFFECTENDURANCE 60=>600 
 BOLT_PAPER 携带数量10=>50 SPEFFECTPARAM=>[ID 2220]雷纸 EFFECTENDURANCE 60=>600
 BONE_MARROW_ASH 携带数量10=>50
@@ -53,6 +53,14 @@ SPEFFECTPARAM=>[ID 40]NO RESONANCE 常驻状态修改
 =>[ID 4801]禁忌森林通往IOSEFKA诊所的地下毒沼泽 中毒后持续时间 40=>10
 =>[ID 102000~102002]EYE符文的探索度增加 统一改到3 即提高300%
 =>[ID 180060]MILK_WEED符文探索度增加 0.1=>1
+
+
+野兽化等级相关
+SPEFFECTPARAM=>
+[ID 230]默认状态 不修改
+[ID 231] physicsDiffenceRate/magicDiffenceRate/fireDiffenceRate/thunderDiffenceRate =>0.95
+[ID 232~236] 每升一级防御下降0.05 236时防御到0.7
+[ID 236] slashAttackPowerRate/blowAttackPowerRate/thrustAttackPowerRate =>1.8
 
 
 
@@ -116,17 +124,16 @@ BLADE_OF_MERCY  无限耐久 基础攻击略加强 补正略加强 +10时 物攻
 RIFLE_SPEAR     无限耐久 取消秘法补正 追加到血质补正上 +10时 物攻170 血质攻击170 力量补正95 技巧补正95 血质补正100
 STAKE_DRIVER    无限耐久 取消秘法补正 追加到力量技巧补正上 +10时 物攻170 力量补正110 技巧补正100
 LUDWIG_HOLY_BLADE  无限耐久 增加秘法伤害 基础攻击略加强 补正略加强 +10时 物攻200 秘法攻击120 力量补正85 技巧补正85 秘法补正80
-HOLY_MOONLIGHT_SWORD 
+HOLY_MOONLIGHT_SWORD 无限使用 +10时 物攻180 秘法攻击100 削韧28=>38 力量补正80 技巧补正60 秘法补正100
 TONITRUS        无限耐久 雷电攻击加强 补正加强 +10时 物攻160 雷电攻击160  力量补正100 技巧补正60 秘法补正100 SPEFFECTPARAM=>[ID 6032]充电后持续7秒=>120秒
 Reiterpallasch  无限耐久 取消秘法补正 补正加强 +10时 物攻170 血质攻击170 力量补正90 技巧补正100 血质补正110
 BEAST_CUTTER    无限耐久 +10时 物攻184=>195 削韧25=>60 力量补正105 技巧补正55 秘法补正150 方便转属性武器
+BEAST_CLAW      无限耐久 补正加强 削韧加强 +10时 物攻150 削韧15=>25 力量补正75 技巧补正65 秘法补正135
 BEASTHUNTER_SAIF  无限耐久 秘法补正加强 +10时 物攻180 削韧15=>25  力量补正55 技巧补正95 秘法补正145
 BOOM_HAMMER     无限耐久 +10时 物攻180 火焰攻击170 削韧20=>45 力量补正100 技巧补正60 秘法补正75
 AMYGDALAN_ARM 
 CHIKAGE
 旋转锯
-月光大剑
-野兽爪
 
 
 BEAST CUTTER 这几个优先加强
@@ -197,7 +204,8 @@ LUDWIG_HOLY_BLADE 售价改到10 双手大剑
 HOLY_MOONLIGHT_SWORD 售价改到10 月光圣剑
 TONITRUS       售价改到10 电锥
 Reiterpallasch 售价改到10 骑士枪剑
-BEAST_CUTTER   售价改到10 
+BEAST_CUTTER   售价改到10
+BEAST_CLAW     售价改到10
 BOOM_HAMMER    售价改到10 爆炸锤
 AMYGDALAN_ARM  售价改到10
 CHIKAGE        售价改到10
