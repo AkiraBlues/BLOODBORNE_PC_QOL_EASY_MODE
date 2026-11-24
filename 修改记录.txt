@@ -141,12 +141,13 @@ BEAST_CUTTER    无限耐久 +10时 物攻184=>195 削韧25=>60 力量补正105 
 BEAST_CLAW      无限耐久 补正加强 削韧加强 +10时 物攻170 削韧15=>25 力量补正75 技巧补正65 秘法补正135
 BEASTHUNTER_SAIF  无限耐久 秘法补正加强 +10时 物攻180 削韧15=>25  力量补正55 技巧补正95 秘法补正145
 BOOM_HAMMER     无限耐久 +10时 物攻180 火焰攻击170 削韧20=>45 力量补正100 技巧补正60 秘法补正75
-AMYGDALAN_ARM 
-CHIKAGE
+AMYGDALAN_ARM   无限耐久 +10时 物攻195 秘法攻击95 削韧30=>80 力量补正95 技巧补正55 秘法补正100
+WHIRLIGIG_SAW   无限耐久 +10时 物攻190 力量补正100 技巧补正45 秘法补正140
+CHURCH_PICK     无限耐久 +10时 物攻175 削韧20=>25 力量补正55 技巧补正95 秘法补正135
+CHIKAGE         无限耐久 取消秘法补正 追加到其他补正上 +10时 物攻184 血攻184 削韧15=>25 力量补正50 技巧补正90 血质补正130 
+SPEFFECTPARAM=>[6740] 变形后HP扣减配置 改为每2秒扣除1HP [6741]变形后蓄力攻击HP扣除 改为扣除1点HP 延长触发间隔 ATKPARAM_PC=>[200390]开始 SWORD组
+只要spEffectId1=6400的统一改到6405 即增加CHIKAGE的快毒(其实是魂里面的出血攻击)伤害 同步修改 SPEFFECTPARAM=>[6409]=>registBlood 30=>45 以使得面板数据和实际数据相同
 洛阳
-旋转锯
-教会刺
-
 
 
 BEAST CUTTER 这几个优先加强
@@ -172,10 +173,12 @@ GRAVEGUARD SET   所有异常状态抗性提高到10倍
 幻影王冠         所有异常状态抗性提高到10倍 增加全抗性
 KNIGHT SET       所有异常状态抗性提高到10倍
 CAINHURST SET    所有异常状态抗性提高到10倍
-
+YAMAMURA SET     所有异常状态抗性提高到10倍
+OLD_HUNTER_SET   所有异常状态抗性提高到10倍 包括装饰性老猎人装备
+HARROWED_SET     所有异常状态抗性提高到10倍 受苦者套装
 CONSTABLE SET    所有异常状态抗性提高到10倍
 BUTCHER SET      所有异常状态抗性提高到10倍
-
+MARIA SET        所有异常状态抗性提高到10倍
 
 
 升级所需魂 魂的升级计算公式很复杂 核心是(等级+81)^2*init_inclination_soul 得到一个初始的结果 然后基于这个结果不断放大步进
@@ -222,13 +225,15 @@ BEAST_CLAW     售价改到10
 BOOM_HAMMER    售价改到10 爆炸锤
 AMYGDALAN_ARM  售价改到10
 CHIKAGE        售价改到10
+RAKUYO         售价改到10
 GRATIA_FIST    售价改到10
 BEASTHUNTER_SAIF 售价改到10 
-
+WHIRLIGIG_SAW    售价改到10  旋转锯
+CHURCH_PICK     售价改到10   教会尖锥
+BLOODLETTER     售价改到10
 
 Crowfeather set 售价改到1000 包括BEAK_MASK
 探墓者套装      售价改到1000
-
 
 
 
@@ -238,7 +243,7 @@ HUNTER_CHIEF_EMBLEM 10000=>1000
 灵视商店修改
 灰狼套装       每个都改为1灵视
 GASCOIGNE套装  每个都改为1灵视
-
+MARIA SET      每个都改为1灵视
 
 
 
