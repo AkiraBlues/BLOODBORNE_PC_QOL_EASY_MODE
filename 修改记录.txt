@@ -20,7 +20,7 @@ OLD_HUNTER_BONE   bulletConsumeNum 4=>1 子弹消耗降低为1  SPEFFECTPARAM=>[
 IOSEFKA_BLOOD_VEIL  无限使用 每次消耗2子弹  transfusionHpRate -70=>-90
 BLOOD_OF_ARIANNA    无限使用 每次消耗2子弹  transfusionHpRate -25=>-50 SPEFFECTPARAM=>[ID 3031]附带耐力恢复加速 持续时间调整到600秒
 BLOOD_OF_ADELLA     无限使用 每次消耗2子弹  transfusionHpRate -25=>-50 SPEFFECTPARAM=>[ID 3061]附带HP持续恢复效果 持续时间调整到100秒 触发间隔不变 恢复量 5=>2
-
+BLOOD_OF_ADELINE    无限使用 每次消耗2子弹  transfusionHpRate -50=>-60 SPEFFECTPARAM=>[ID 3041]HP持续恢复 持续200秒 0.5秒间隔 changeHpPoint -5=>-3
 
 
 
@@ -58,9 +58,19 @@ SPEFFECTPARAM=>[ID 40]NO RESONANCE 常驻状态修改
 野兽化等级相关
 SPEFFECTPARAM=>
 [ID 230]默认状态 不修改
-[ID 231] physicsDiffenceRate/magicDiffenceRate/fireDiffenceRate/thunderDiffenceRate =>0.95
-[ID 232~236] 每升一级防御下降0.05 236时防御到0.7
-[ID 236] slashAttackPowerRate/blowAttackPowerRate/thrustAttackPowerRate =>1.8
+[ID 231] physicsDiffenceRate/magicDiffenceRate/fireDiffenceRate/thunderDiffenceRate =>0.98
+[ID 232~235] 每升一级防御下降0.02
+[ID 236] slashAttackPowerRate/blowAttackPowerRate/thrustAttackPowerRate =>1.8 防御力下降到0.85
+maxStaminaRate会从1.05增加到最高1.20 即体力条最多增加20%
+poizonAttackPower和registIllness是给自身加毒性效果的 不是给怪物加的
+[ID 6650]兽化状态下轻攻击增加的兽性 9=>15
+[ID 6651]兽化状态下重攻击增加的兽性 30=>40
+[ID 6652]兽化状态下中攻击增加的兽性 15=>20
+
+registTherianthrope
+registTherianthropeChangeRate
+changeTherianthropeResistPoint 用于增加兽槽容量 比如通过符文加50点 100点等等 超出300点后兽化等级不会再提升
+
 
 
 
@@ -128,12 +138,15 @@ HOLY_MOONLIGHT_SWORD 无限使用 +10时 物攻180 秘法攻击100 削韧28=>38 
 TONITRUS        无限耐久 雷电攻击加强 补正加强 +10时 物攻160 雷电攻击160  力量补正100 技巧补正60 秘法补正100 SPEFFECTPARAM=>[ID 6032]充电后持续7秒=>120秒
 Reiterpallasch  无限耐久 取消秘法补正 补正加强 +10时 物攻170 血质攻击170 力量补正90 技巧补正100 血质补正110
 BEAST_CUTTER    无限耐久 +10时 物攻184=>195 削韧25=>60 力量补正105 技巧补正55 秘法补正150 方便转属性武器
-BEAST_CLAW      无限耐久 补正加强 削韧加强 +10时 物攻150 削韧15=>25 力量补正75 技巧补正65 秘法补正135
+BEAST_CLAW      无限耐久 补正加强 削韧加强 +10时 物攻170 削韧15=>25 力量补正75 技巧补正65 秘法补正135
 BEASTHUNTER_SAIF  无限耐久 秘法补正加强 +10时 物攻180 削韧15=>25  力量补正55 技巧补正95 秘法补正145
 BOOM_HAMMER     无限耐久 +10时 物攻180 火焰攻击170 削韧20=>45 力量补正100 技巧补正60 秘法补正75
 AMYGDALAN_ARM 
 CHIKAGE
+洛阳
 旋转锯
+教会刺
+
 
 
 BEAST CUTTER 这几个优先加强
