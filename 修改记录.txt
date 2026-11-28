@@ -215,6 +215,8 @@ EXECUTIONER_SET  所有异常状态抗性提高到10倍 包含黄金三角头
 YAHARGUL_SET     所有异常状态抗性提高到10倍
 BRADOR_SET       所有异常状态抗性提高到10倍
 Henryk_SET       所有异常状态抗性提高到10倍
+CHOIR_SET        所有异常状态抗性提高到10倍
+GEHRMAN_SET     所有异常状态抗性提高到10倍
 
 刀斧手套装是拿轮子的那货的套装 拿到徽章后除了轮子武器外还有个头盔可以去商店买 也是四件套 因此也要改价格和抗性
 
@@ -275,6 +277,7 @@ BURIAL_BLADE    售价改到10
 Crowfeather set 售价改到1000 包括BEAK_MASK
 探墓者套装      售价改到1000
 黄金三角头      售价改到1000
+GEHRMAN_SET     售价改到1000
 
 
 
@@ -285,6 +288,7 @@ HUNTER_CHIEF_EMBLEM 10000=>1000
 灰狼套装       每个都改为1灵视
 GASCOIGNE套装  每个都改为1灵视
 MARIA SET      每个都改为1灵视
+Henryk_SET     每个都改为1灵视
 BLOOD_STONE_CHUNK  改为3灵视
 BLOOD_ROCK     改为5灵视
 
