@@ -32,12 +32,13 @@ WINTER LANTERN 日文名字叫HOZUKI 基于这个名字可以在NPCPARAM里面�
 BLOOD_VEIL 携带数量 20=>50 transfusionHpRate 恢复量 -40=>-50 即恢复50%的HP
 QUICKSILVER_BULLETS 携带数量 20=>80 sellValue 30=>20
 BLOOD_BULLETS 血子弹 携带数量 5=>20 SPEFFECTPARAM=>[ID 2012] 消耗30%HP 改为消耗100点HP 补充血子弹数量5=>10
-ANTIDOTE 携带数量10=>99
-SEDATIVE 携带数量10=>99
+ANTIDOTE 携带数量10=>50
+SEDATIVE 携带数量10=>50
 BEAST_BLOOD_PELLET 携带数量10=>50 SPEFFECTPARAM=>[ID 3240]持续时间调整到600秒 
 FIRE_PAPER 携带数量10=>50 SPEFFECTPARAM=>[ID 2200]火纸 EFFECTENDURANCE 60=>600 
 BOLT_PAPER 携带数量10=>50 SPEFFECTPARAM=>[ID 2220]雷纸 EFFECTENDURANCE 60=>600
 BONE_MARROW_ASH 携带数量10=>50
+EMPTY_PHANTASM_SHELL bulletConsumeNum 3=>1 SPEFFECTPARAM[2210] 附魔 EFFECTENDURANCE 60=>600
 PEBBLE     携带数量20=>99
 MADMAN_KNOWLEDGE   灵视+1=>+2
 GREAT_ONE_WISDOM   灵视+2=>+5
@@ -68,7 +69,7 @@ SPEFFECTPARAM=>[ID 40]NO RESONANCE 常驻状态修改
 =>[ID 394]不锁定时躲避的体力消耗降低 10=>5
 =>[ID 395]锁定时躲避的体力消耗降低 10=>5
 =>[ID 5230~5236]changeHpRate 70=>10 狂乱伤害从70%HP扣减降低到10%
-=>[ID 5280~5286]effectEndurance 统一改为6秒 即受到狂乱攻击后狂乱槽降低统一持续6秒 攻击间隔从0.1秒改为0.25秒 注意5286是BLOODLETTER的双持L2冲击波自伤特效
+=>[ID 5280~5286]effectEndurance 统一改为2秒 即受到狂乱攻击后狂乱槽降低统一持续2秒 注意5286是BLOODLETTER的双持L2冲击波自伤特效
 =>[ID 2130]粪球会导致玩家毒抗下降 粪球持续时间600=>30
 尝试修改地形中毒的持续效果和特效
 数据查找的方式 vanillaprop spAttribute 4 && vanillaprop stateInfo 2 && vanillaprop effectEndurance 40
@@ -178,10 +179,10 @@ SPEFFECTPARAM=>[6740] 变形后HP扣减配置 改为每2秒扣除1HP [6741]变�
 只要spEffectId1=6400的统一改到6405 即增加CHIKAGE的快毒(其实是魂里面的出血攻击)伤害 同步修改 SPEFFECTPARAM=>[6409]=>registBlood 30=>45 以使得面板数据和实际数据相同
 RAKUYO         已修改
 BLOODLETTER    已修改
-SIMON_BOWBLADE
-LOGARIUS_WHEEL
-BURIAL_BLADE
-KOS_PARASITE
+SIMON_BOWBLADE 已修改
+LOGARIUS_WHEEL 已修改
+BURIAL_BLADE 
+KOS_PARASITE 已修改
 
 
 
@@ -211,6 +212,9 @@ CONSTABLE SET    所有异常状态抗性提高到10倍
 BUTCHER SET      所有异常状态抗性提高到10倍
 MARIA SET        所有异常状态抗性提高到10倍
 EXECUTIONER_SET  所有异常状态抗性提高到10倍 包含黄金三角头
+YAHARGUL_SET     所有异常状态抗性提高到10倍
+BRADOR_SET       所有异常状态抗性提高到10倍
+Henryk_SET       所有异常状态抗性提高到10倍
 
 刀斧手套装是拿轮子的那货的套装 拿到徽章后除了轮子武器外还有个头盔可以去商店买 也是四件套 因此也要改价格和抗性
 
@@ -241,6 +245,7 @@ Tomb_Mold(2)     售价改到500
 Tomb_Mold(3)     售价改到1000
 Tomb_Mold(4)     售价改到2000
 Tomb_Mold(5)     售价改到4000
+TWIN_BLOOD_STONE_SHARDS  售价改到4000
 
 HUNTER_AXE     售价改到10
 SAW_CLEAVER    售价改到10
@@ -265,6 +270,7 @@ BEASTHUNTER_SAIF 售价改到10
 WHIRLIGIG_SAW    售价改到10  旋转锯
 CHURCH_PICK     售价改到10   教会尖锥
 BLOODLETTER     售价改到10
+BURIAL_BLADE    售价改到10
 
 Crowfeather set 售价改到1000 包括BEAK_MASK
 探墓者套装      售价改到1000
@@ -279,6 +285,8 @@ HUNTER_CHIEF_EMBLEM 10000=>1000
 灰狼套装       每个都改为1灵视
 GASCOIGNE套装  每个都改为1灵视
 MARIA SET      每个都改为1灵视
+BLOOD_STONE_CHUNK  改为3灵视
+BLOOD_ROCK     改为5灵视
 
 
 
